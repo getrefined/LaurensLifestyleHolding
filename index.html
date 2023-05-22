@@ -22,6 +22,18 @@
 							class="logo"
 						/>
 					</div>
+
+					<div class="socials">
+						<a href=""
+							><img src="/assets/Insta.svg" alt="instagram link" class="insta"
+						/></a>
+						<a href=""
+							><img
+								src="/assets/Facebook.svg"
+								alt="facebook link"
+								class="facebook"
+						/></a>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -52,8 +64,10 @@
 				<div class="wrap">
 					<div class="newsletter__inside">
 						<p class="newsletter__title">Get a free consultation</p>
-
-						<div class="newsletter__input-wrap">
+						<form
+							onsubmit="return submitForm(this);"
+							class="newsletter__input-wrap"
+						>
 							<input
 								class="newsletter__input"
 								name="firstname"
@@ -66,27 +80,48 @@
 								type="text"
 								placeholder="SURNAME"
 							/>
-							<a
+							<input
+								type="submit"
+								value="Send"
 								href="mailto:lauren@laurenslifestyle.co.uk"
 								class="newsletter__btn"
 								id="mail"
-								>contact
-							</a>
-						</div>
+							/>
+						</form>
 					</div>
 				</div>
 			</section>
 		</main>
+
+		<footer>
+			<div class="wrap">
+				<div class="footer-flex">
+					<img
+						src="/assets/logo-gold.svg"
+						alt="Laurens lifestyle logo"
+						class="footer-logo"
+					/>
+
+					<div class="footer-links">
+						<p>© 2023 Lauren's Lifestyle.</p>
+						<a href="https://therefinery.je" class="refinery"
+							>Website by <strong>The Refinery</strong></a
+						>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
 
 <script>
-	const fname = document.getElementsByName("firstname")[0].value;
-	const lname = document.getElementsByName("lastname")[0].value;
-	const btn = document.getElementById("mail");
-	const url = `mailto:lauren@laurenslifestyle.com?subject=Free Consultation&body=First Name: ${fname}%0d%0a Last Name: ${lname}%0d%0a`;
-
-	btn.addEventListener("click", () => {
-		document.getElementById("mail").setAttribute("href", url);
-	});
+	function submitForm(form) {
+		window.open(
+			"mailto:someone@example.com?subject=Website%20Enquiry%20&body=First%20Name:%20" +
+				form.firstname.value +
+				"%0D%0A%20Last%20Name:%20" +
+				form.lastname.value
+		);
+		return false; /* cancel submit or else page reloads */
+	}
 </script>
