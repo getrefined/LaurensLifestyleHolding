@@ -41,7 +41,7 @@ body {
 }
 
 .wrap {
-  width: min(100% - 4rem, 120ch);
+  width: min(100% - 2rem, 120ch);
   margin-left: auto;
   margin-right: auto;
 }
@@ -110,7 +110,7 @@ img {
   display: block;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 1000px) {
   .flex {
     display: flex;
     align-items: center;
@@ -119,7 +119,7 @@ img {
 .flex-left {
   margin-bottom: 2rem;
 }
-@media (min-width: 750px) {
+@media (min-width: 1000px) {
   .flex-left {
     max-width: 450px;
     padding-top: 4rem;
@@ -138,7 +138,7 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (min-width: 750px) {
+@media (min-width: 1000px) {
   .flex .splash {
     position: absolute;
     left: unset;
@@ -167,6 +167,12 @@ img {
 .newsletter {
   z-index: 1;
   margin-bottom: 4rem;
+  padding-top: 2rem;
+}
+@media (min-width: 750px) {
+  .newsletter {
+    padding-top: unset;
+  }
 }
 .newsletter__inside {
   background-color: var(--clr-white);
@@ -182,8 +188,15 @@ img {
 .newsletter__title {
   text-transform: uppercase;
   color: var(--clr-primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 750px) {
+  .newsletter__title {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1000px) {
   .newsletter__title {
     font-size: 1.7rem;
     margin-bottom: 0;
@@ -197,17 +210,30 @@ img {
 }
 .newsletter__input-wrap {
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
 }
+@media (min-width: 680px) {
+  .newsletter__input-wrap {
+    flex-direction: row;
+  }
+}
 .newsletter__input-wrap * {
-  width: 33.3%;
+  width: 100%;
+}
+@media (min-width: 680px) {
+  .newsletter__input-wrap * {
+    width: 33.3%;
+  }
 }
 .newsletter__input-wrap *:not(:last-child) {
-  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
-@media (min-width: 750px) {
+@media (min-width: 680px) {
   .newsletter__input-wrap *:not(:last-child) {
+    margin-right: 0.5rem;
+    margin-bottom: unset;
     margin-right: 1rem;
   }
 }
@@ -226,4 +252,11 @@ img {
   text-transform: uppercase;
   color: var(--clr-primary);
   text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }/*# sourceMappingURL=style.css.map */

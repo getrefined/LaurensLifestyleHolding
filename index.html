@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="style.css" />
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />
 		<link rel="apple-touch-icon" href="favicon.ico" />
+		<script src="script.js"></script>
 	</head>
 
 	<body>
@@ -53,13 +54,24 @@
 						<p class="newsletter__title">Get a free consultation</p>
 
 						<div class="newsletter__input-wrap">
-							<input class="newsletter__input" type="text" placeholder="NAME" />
 							<input
 								class="newsletter__input"
+								name="firstname"
 								type="text"
-								placeholder="EMAIL"
+								placeholder="FIRST NAME"
 							/>
-							<a href="#" class="newsletter__btn">Subscribe</a>
+							<input
+								class="newsletter__input"
+								name="lastname"
+								type="text"
+								placeholder="SURNAME"
+							/>
+							<a
+								href="mailto:lauren@laurenslifestyle.co.uk"
+								class="newsletter__btn"
+								id="mail"
+								>contact
+							</a>
 						</div>
 					</div>
 				</div>
@@ -67,3 +79,14 @@
 		</main>
 	</body>
 </html>
+
+<script>
+	const fname = document.getElementsByName("firstname")[0].value;
+	const lname = document.getElementsByName("lastname")[0].value;
+	const btn = document.getElementById("mail");
+	const url = `mailto:lauren@laurenslifestyle.com?subject=Free Consultation&body=First Name: ${fname}%0d%0a Last Name: ${lname}%0d%0a`;
+
+	btn.addEventListener("click", () => {
+		document.getElementById("mail").setAttribute("href", url);
+	});
+</script>
