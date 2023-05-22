@@ -19,23 +19,31 @@
 	src: url("fonts/EBGaramond-Regular.ttf");
 }
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
 html,
 body {
 	height: 100%;
 }
 
 body {
+	-webkit-font-smoothing: antialiased;
+
 	// max-width: 150ch;
 	// margin-left: auto;
 	// margin-right: auto;
 	background-color: var(--clr-black);
 	color: var(--clr-white);
 	font-family: "EBGaramond-Regular", sans-serif;
-}
-
-* {
-	margin: 0;
-	padding: 0;
 }
 
 a {
