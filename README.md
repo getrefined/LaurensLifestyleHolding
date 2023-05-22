@@ -1,2 +1,2 @@
-# Designer Sofa Interiors
+# Laurens Lifestyle Holding Page
 Holding page. SCSS + Hosted on Github Pages
