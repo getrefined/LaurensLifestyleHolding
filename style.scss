@@ -4,7 +4,8 @@
 	--clr-primary: rgba(27 74 59);
 	--clr-secondary: rgb(195 164 124);
 	--clr-tertiary: rgb(122 166 147);
-	--clr-grey: rgb(228 228 227);
+	//--clr-grey: rgb(228 228 227);
+	--clr-grey: rgb(235 235 235);
 }
 
 @font-face {
@@ -165,7 +166,8 @@ img {
 			object-fit: cover;
 			width: 55%;
 			// height: 400px;
-			height: 650px;
+			//height: 650px;
+			height: auto;
 
 			&::after {
 				content: "";
