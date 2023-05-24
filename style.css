@@ -346,4 +346,14 @@ main {
   flex: 1 0 auto;
 }
 
+button {
+  --webkit-appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 150ms;
+}
+button:hover {
+  background-color: var(--clr-secondary);
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -361,3 +361,15 @@ body {
 main {
 	flex: 1 0 auto;
 }
+
+button{
+	--webkit-appearance: none;
+	background-color: #fff;
+	cursor: pointer;
+	transition: 150ms;
+	
+	&:hover{
+		background-color: var(--clr-secondary);
+	}
+
+}
